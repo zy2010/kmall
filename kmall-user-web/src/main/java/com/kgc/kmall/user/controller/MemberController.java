@@ -6,13 +6,9 @@ import org.apache.dubbo.config.annotation.Reference;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
-
-import javax.annotation.Resource;
 import java.util.List;
-
 @Controller
 public class MemberController {
-
     @Reference
     MemberService memberService;
 
@@ -22,4 +18,5 @@ public class MemberController {
         List<Member> members = memberService.selectAllMember();
         return members;
     }
+
 }
